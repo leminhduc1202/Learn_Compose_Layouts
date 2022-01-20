@@ -3,12 +3,7 @@ package com.mdapp.layouts
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -62,7 +57,8 @@ fun BodyContent(modifier: Modifier = Modifier) {
     Row(modifier = modifier
         .background(color = Color.LightGray)
         .padding(16.dp)
-        .size(200.dp)
+        .fillMaxWidth()
+//        .size(200.dp)
         .horizontalScroll(rememberScrollState()),
         content = {
             StaggeredGrid {
